@@ -28,6 +28,9 @@
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152723791-2"></script>
+  <!-- Recaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -73,10 +76,21 @@
         <div class="col-lg-7 my-auto">
           <div class="header-content mx-auto">
             <!-- <h1 class="mb-5">Only Get One Link to Make an Impression?</h1> -->
-            <h1 class="mb-5">Sorry, </h1>
-            <p class="mb-4">we're experiencing high volumes of traffic and aren't currently taking any more subscribers.</p>
+            <h1 class="mb-3">Sorry... </h1>
+            <p class="mb-4">We're experiencing high volumes of traffic, but will be taking more subscribers soon. Fill out the form below to be notified when we are ready for you! 😊</p>
             <!-- <h1 class="mb-5">Share everything you've got.</h1> -->
-            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger w-100">Get Started for Free!</a>
+            <form name="notify-list" method="POST" data-netlify="true">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="name" class="form-control" id="name" placeholder="First and Last Name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
           </div>
         </div>
         <div class="col-lg-5 my-auto">
